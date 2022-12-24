@@ -21,8 +21,8 @@ public class CabinOfButton implements IDescribable {
     }
 
     public void buttonConditionCheck(boolean isButtonPressed){
-        if (isButtonPressed == true){
-
+        if (isButtonPressed){
+            ElectricMachineOfControl.setPower(true);
         }
     }
 

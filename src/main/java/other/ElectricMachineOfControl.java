@@ -1,9 +1,9 @@
 package other;
 
 public class ElectricMachineOfControl {
-    private boolean power;
+    private static boolean power;
 
-    public void setPower() {
+    public ElectricMachineOfControl(){
 
     }
 
@@ -11,7 +11,11 @@ public class ElectricMachineOfControl {
         return power;
     }
 
-    public void setPower(boolean power) {
-        this.power = power;
+    public static void setPower(boolean power) {
+        ElectricMachineOfControl.power = power;
+    }
+
+    public void superProgram(){
+        
     }
 }
