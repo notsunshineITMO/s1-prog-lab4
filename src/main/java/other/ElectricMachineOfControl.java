@@ -15,7 +15,13 @@ public class ElectricMachineOfControl {
         ElectricMachineOfControl.power = power;
     }
 
-    public void superProgram(){
-        
+    public void superProgram(boolean isPower){
+        if (isPower){
+            Engine.setOn(true);
+            AirCleaners.setOn(true);
+            Fans.setOn(true);
+            Thermostats.setOn(true);
+        }
+
     }
 }
