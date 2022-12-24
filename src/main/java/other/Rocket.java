@@ -60,7 +60,7 @@ public class Rocket {
 
     public byte getLevelOfArmored(PartsOfRocket part) {
         byte levelOfArmored;
-        if (part == PartsOfRocket.CABINE_OF_CONTROL && maxLevelOfArmored >= 3) {
+        if (part == PartsOfRocket.CABIN_OF_CONTROL && maxLevelOfArmored >= 3) {
             return levelOfArmored = 3;
         }
         else if (part == PartsOfRocket.BYTECODE){
