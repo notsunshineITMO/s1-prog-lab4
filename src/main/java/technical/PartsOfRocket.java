@@ -1,9 +1,11 @@
 package technical;
 
 public enum PartsOfRocket {
-    FANS,
     AIR_CLEANERS,
-    THERMOSTATS,
     BYTECODE,
-    CABINE_OF_CONTROL
+    CABIN_OF_CONTROL,
+    ELECTRIC_MACHINE_OF_CONTROL,
+    FANS,
+    THERMOSTATS
+
 }
