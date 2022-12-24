@@ -1,8 +1,8 @@
 package other;
 
 
-public class CabineOfControl {
-    public CabineOfControl(byte levelOfArmored) {
+public class CabinOfControl {
+    public CabinOfControl(byte levelOfArmored) {
     }
 
     private static class AntiGravityDevice {

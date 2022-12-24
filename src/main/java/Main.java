@@ -2,7 +2,6 @@ import other.*;
 import person.*;
 import technical.PartsOfRocket;
 import technical.Places;
-import unusable.FakeMain;
 
 
 public class Main {
@@ -26,9 +25,9 @@ public class Main {
         Fans fans = new Fans("steel", 23);
         Thermostats thermostats = new Thermostats("steel", 8);
         AirCleaners airCleaners = new AirCleaners("steel", 14);
-        CabineOfControl cabineOfControl = new CabineOfControl((byte) 3);
+        CabinOfControl cabinOfControl = new CabinOfControl((byte) 3);
 
-        Rocket rocket = new Rocket(engine, fans, thermostats, airCleaners, cabineOfControl);
+        Rocket rocket = new Rocket(engine, fans, thermostats, airCleaners, cabinOfControl);
 
 
 

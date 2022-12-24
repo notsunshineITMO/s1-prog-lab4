@@ -1,22 +1,21 @@
 package other;
 
 import technical.PartsOfRocket;
-import technical.Places;
 
 public class Rocket {
-    private final CabineOfControl cabineOfControl;
+    private final CabinOfControl cabinOfControl;
     private final Engine engine;
     private final Fans fans;
     private final Thermostats thermostats;
     private final AirCleaners airCleaners;
     private static final byte maxLevelOfArmored = 3;
 
-    public Rocket(Engine engine, Fans fans, Thermostats thermostats, AirCleaners airCleaners, CabineOfControl cabineOfControl) {
+    public Rocket(Engine engine, Fans fans, Thermostats thermostats, AirCleaners airCleaners, CabinOfControl cabinOfControl) {
         this.engine = engine;
         this.fans = fans;
         this.thermostats = thermostats;
         this.airCleaners = airCleaners;
-        this.cabineOfControl = cabineOfControl;
+        this.cabinOfControl = cabinOfControl;
     }
 
     public void launchSystems() throws InterruptedException {
