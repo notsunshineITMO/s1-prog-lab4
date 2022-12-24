@@ -2,10 +2,12 @@ import other.*;
 import person.*;
 import technical.PartsOfRocket;
 import technical.Places;
+import unusable.FakeMain;
 
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
+
         String pl_rocket = Places.ROCKET.toString();
         String pl_building = Places.PAVILION_OF_ZERO_GRAVITY.toString();
         String pl_city = Places.CITY.toString();
