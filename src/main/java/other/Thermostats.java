@@ -1,7 +1,7 @@
 package other;
 
 public class Thermostats {
-    private boolean isOn;
+    private static boolean isOn;
     private String materia;
     private int count;
     public static byte levelOfArmored;
@@ -13,8 +13,8 @@ public class Thermostats {
     }
     
 
-    public void setOn(boolean isOn) {
-        this.isOn = isOn;
+    public static void setOn(boolean isOn) {
+        Thermostats.isOn = isOn;
     }
 
     public boolean condition(){

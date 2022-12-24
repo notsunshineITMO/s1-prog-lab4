@@ -4,15 +4,15 @@ package other;
 public class AirCleaners {
     private int count;
     private String material;
-    private boolean isOn;
+    private static boolean isOn;
 
     public AirCleaners(String material, int count) {
         this.material = material;
         this.count = count;
     }
 
-    public void setOn(boolean isOn) {
-        this.isOn = isOn;
+    public static void setOn(boolean isOn) {
+        AirCleaners.isOn = isOn;
     }
     public boolean condition(){
         return isOn;

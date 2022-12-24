@@ -1,7 +1,7 @@
 package other;
 
 public class Fans {
-    private boolean isOn;
+    private static boolean isOn;
     private String material;
     private int count;
 
@@ -10,8 +10,8 @@ public class Fans {
         this.count = count;
     }
 
-    public void setOn(boolean isOn) {
-        this.isOn = isOn;
+    public static void setOn(boolean isOn) {
+        Fans.isOn = isOn;
     }
 
     public boolean condition(){

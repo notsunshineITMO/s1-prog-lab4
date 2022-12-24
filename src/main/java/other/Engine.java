@@ -2,7 +2,7 @@ package other;
 
 public class Engine {
     private String material;
-    private boolean isOn;
+    private static boolean isOn;
     private double version;
 
     public Engine (String material, double version) {
@@ -10,8 +10,8 @@ public class Engine {
         this.version = version;
     }
 
-    public void setOn(boolean isOn) {
-        this.isOn = isOn;
+    public static void setOn(boolean isOn) {
+        Engine.isOn = isOn;
     }
 
     public boolean condition(){

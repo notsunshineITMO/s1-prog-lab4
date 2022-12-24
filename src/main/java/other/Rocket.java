@@ -3,28 +3,26 @@ package other;
 import technical.PartsOfRocket;
 
 public class Rocket {
-    private final CabinOfControl cabinOfControl;
     private final Engine engine;
     private final Fans fans;
     private final Thermostats thermostats;
     private final AirCleaners airCleaners;
     private static final byte maxLevelOfArmored = 3;
 
-    public Rocket(Engine engine, Fans fans, Thermostats thermostats, AirCleaners airCleaners, CabinOfControl cabinOfControl) {
+    public Rocket(Engine engine, Fans fans, Thermostats thermostats, AirCleaners airCleaners) {
         this.engine = engine;
         this.fans = fans;
         this.thermostats = thermostats;
         this.airCleaners = airCleaners;
-        this.cabinOfControl = cabinOfControl;
     }
 
     public void launchSystems() throws InterruptedException {
         System.out.println("Запуск всех систем...");
         Thread.sleep(1000);
-        engine.setOn(true);
-        fans.setOn(true);
-        thermostats.setOn(true);
-        airCleaners.setOn(true);
+        Engine.setOn(true);
+        Fans.setOn(true);
+        Thermostats.setOn(true);
+        AirCleaners.setOn(true);
         System.out.println("Все систеы запущены.");
         Thread.sleep(500);
         System.out.println();
@@ -60,7 +58,7 @@ public class Rocket {
 
     public byte getLevelOfArmored(PartsOfRocket part) {
         byte levelOfArmored;
-        if (part == PartsOfRocket.CABIN_OF_CONTROL && maxLevelOfArmored >= 3) {
+        if (part == PartsOfRocket.CABIN_OF_CONTROL) {
             return levelOfArmored = 3;
         }
         else if (part == PartsOfRocket.BYTECODE){
