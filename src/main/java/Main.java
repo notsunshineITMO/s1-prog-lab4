@@ -109,6 +109,7 @@ public class Main {
         System.out.println(neznaika.Fly());
         System.out.println();
 
+        //Znaika check anti gravity device
         if (time.getTime() == Time.MORNING){
             System.out.println(neznaika + " включил прибор невесомости.");
             workOfAntiGravityDevice.process();
@@ -117,8 +118,14 @@ public class Main {
             System.out.println(neznaika + " тщательно проверил, не остался ли кто-нибудь в павильоне.");
         }
 
-        if (visitors.getLocation() == Places.NEAR.toString() + Places.AREA_OF_ZERO_GRAVITY.toString()){
-
+        //weight condition in/near area of zero gravity
+        if (visitors.getLocation().equals(Places.NEAR.toString() + " " + Places.AREA_OF_ZERO_GRAVITY.toString())){
+            visitors.weight = visitors.weight * 1.256;
         }
+        if (visitors.getLocation().equals(Places.IN.toString() + " " + Places.AREA_OF_ZERO_GRAVITY.toString())){
+            visitors.weight = visitors.weight * 0.001;
+        }
+
+
     }
 }
