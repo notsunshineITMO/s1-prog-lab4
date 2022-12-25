@@ -4,8 +4,8 @@ import java.util.Arrays;
 
 
 public class Where implements IDescribable {
-    private String[] places = {Places.ROCKET.toString(), Places.CITY.toString(), Places.PAVILION_OF_ZERO_GRAVITY.toString()};
-    private String[] whereExactly = {Places.IN.toString(),Places.NEAR.toString()};
+    private String[] places = {Places.ROCKET.toString(), Places.CITY.toString(), Places.PAVILION_OF_ZERO_GRAVITY.toString(), Places.THE_MOON.toString()};
+    private String[] whereExactly = {Places.IN.toString(),Places.NEAR.toString(), Places.ON.toString()};
     private String place;
 
     public void setPlace(String whereExactly, String where) {
