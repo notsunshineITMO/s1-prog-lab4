@@ -6,6 +6,8 @@ public enum PartsOfRocket {
     CABIN_OF_CONTROL,
     ELECTRIC_MACHINE_OF_CONTROL,
     FANS,
-    THERMOSTATS
+    THERMOSTATS,
+    UPPER_PART,
+    LOWER_PART
 
 }

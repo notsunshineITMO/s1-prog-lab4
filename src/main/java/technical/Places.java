@@ -6,5 +6,5 @@ public enum Places {
     CITY,
     PAVILION_OF_ZERO_GRAVITY,
     IN,
-    NEAR,
+    NEAR
 }
