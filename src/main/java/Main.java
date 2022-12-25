@@ -41,14 +41,19 @@ public class Main {
         System.out.println(seledochka.describe() + "и " + fuchsia.describe());
         visitors.setLocation(pl_in, pl_rocket);
         neznaika.setLocation(pl_in, pl_rocket);
-        Rocket.Notice(neznaika.getName(),"pl_in");
-        Rocket.Notice(visitors.getName(), "pl_in");
+        Rocket.Notice(neznaika.getName(),pl_in);
+        Rocket.Notice(visitors.getName(), pl_in);
         System.out.println(neznaika.describe());
         System.out.println(visitors.describe());
+        System.out.println();
 
+        System.out.println(visitors.lay("на койках."));
+        System.out.println(visitors.sit("в салоне."));
+        System.out.println(visitors.examine(PartsOfRocket.CABIN_OF_CONTROL +
+                ", " + PartsOfRocket.ELECTRIC_MACHINE_OF_CONTROL +
+                " или " + PartsOfRocket.BYTECODE));
         seledochka.watchFor(PartsOfRocket.FANS);
         fuchsia.watchFor(PartsOfRocket.AIR_CLEANERS);
-
         visitors.Ask(PartsOfRocket.FANS);
         fuchsia.Answer(PartsOfRocket.FANS, fuchsia.getName());
         neznaika.Ask(PartsOfRocket.AIR_CLEANERS);
@@ -59,6 +64,10 @@ public class Main {
         seledochka.watchFor(PartsOfRocket.THERMOSTATS);
         neznaika.Ask(PartsOfRocket.BYTECODE);
         seledochka.Answer(PartsOfRocket.BYTECODE, seledochka.getName());
+        System.out.println();
+
+        System.out.println(visitors.must("надеть скафандры."));
+        System.out.println(visitors.toDo("надели скафандры."));
         Rocket.Notice(neznaika.getName(),"out");
         Rocket.Notice(visitors.getName(), "out");
         System.out.println();
@@ -67,8 +76,8 @@ public class Main {
         visitors.setLocation(pl_near, pl_rocket);
         System.out.println(neznaika.describe() + "и " + visitors.describe());
         neznaika.Waits("какое-то время");
-        Rocket.Notice(neznaika.getName(),"pl_in");
-        Rocket.Notice(visitors.getName(), "pl_in");
+        Rocket.Notice(neznaika.getName(),pl_in);
+        Rocket.Notice(visitors.getName(), pl_in);
         visitors.setLocation(pl_in, pl_rocket);
         neznaika.setLocation(pl_in, pl_rocket);
         System.out.println(visitors.describe() + "и " + neznaika.describe());
