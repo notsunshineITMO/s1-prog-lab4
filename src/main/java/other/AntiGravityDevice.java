@@ -4,7 +4,7 @@ public class AntiGravityDevice {
     public String author;
     public String material;
     public double version;
-
+    public int squareOfAntiGravityArea;
 
     public AntiGravityDevice(String author, String material, double version) {
         this.author = author;
@@ -57,6 +57,8 @@ public class AntiGravityDevice {
         public void setMagnet(String magnet) {
             this.magnet = magnet;
         }
+
+        
+
     }
-    public Work work = new Work(" лунный камень ", " магнит ");
 }
