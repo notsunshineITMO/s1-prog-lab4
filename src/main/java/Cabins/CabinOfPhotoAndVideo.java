@@ -1,9 +1,13 @@
 package Cabins;
 
+import technical.PartsOfRocket;
+import technical.Places;
+
 public class CabinOfPhotoAndVideo {
     private String cameras;
     private String lenses;
     private String softBoxes;
+    public final static PartsOfRocket location = PartsOfRocket.UPPER_PART;
 
     public CabinOfPhotoAndVideo(String cameras, String lenses, String softBoxes){
         this.cameras = cameras;

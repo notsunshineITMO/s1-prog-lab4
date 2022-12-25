@@ -1,7 +1,10 @@
 package Cabins;
 
 
+import technical.PartsOfRocket;
+
 public class CabinOfControl {
+    public final static PartsOfRocket location = PartsOfRocket.UPPER_PART;
     public CabinOfControl() {
 
     }
