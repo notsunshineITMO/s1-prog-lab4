@@ -20,17 +20,18 @@ public class AntiGravityDevice {
         Work.isButtonOn = buttonOn;
     }
 
-    private static class Work {
-        public static boolean isButtonOn;
-        private String lunarStone;
-        private String magnet;
-        private final double defaultDistanceFromLunarStoneToMagnet = 8.5;
-        private double distanceFromLunarStoneToMagnet = defaultDistanceFromLunarStoneToMagnet;
-        private Work(String lunarStone, String magnet){
+    public static class Work {
+        static boolean isButtonOn;
+        String lunarStone;
+        String magnet;
+        final double defaultDistanceFromLunarStoneToMagnet = 8.5;
+        double distanceFromLunarStoneToMagnet = defaultDistanceFromLunarStoneToMagnet;
+
+        public Work(String lunarStone, String magnet){
             this.lunarStone = lunarStone;
             this.magnet = magnet;
         }
-        double process(){
+        public double process(){
             distanceFromLunarStoneToMagnet = defaultDistanceFromLunarStoneToMagnet;
             if (isButtonOn) {
                 while (distanceFromLunarStoneToMagnet > 0) {
@@ -57,4 +58,5 @@ public class AntiGravityDevice {
             this.magnet = magnet;
         }
     }
+    public Work work = new Work(" лунный камень ", " магнит ");
 }

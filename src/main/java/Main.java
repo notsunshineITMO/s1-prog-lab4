@@ -1,12 +1,14 @@
+import Cabins.CabinInPavilion;
 import other.*;
 import person.*;
 import technical.PartsOfRocket;
 import technical.Places;
+import technical.Time;
+import technical.WhatTimeIsAtNow;
 
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
-
         String pl_rocket = Places.ROCKET.toString();
         String pl_building = Places.PAVILION_OF_ZERO_GRAVITY.toString();
         String pl_city = Places.CITY.toString();
@@ -27,9 +29,18 @@ public class Main {
         Fans fans = new Fans("steel", 23);
         Thermostats thermostats = new Thermostats("steel", 8);
         AirCleaners airCleaners = new AirCleaners("steel", 14);
+        CabinInPavilion cabinInPavilion = new CabinInPavilion(znaika.getName(),
+                " лунный камень, магнит, и металл",
+                2.05,
+                " небольшая ",
+                1.0f,
+                " прозрачный пластик");
+        AntiGravityDevice antiGravityDevice = new AntiGravityDevice(znaika.getName()," лунный камень, магнит и металл ", 2.05);
+
+        AntiGravityDevice.Work workOfAntiGravityDevice = new AntiGravityDevice.Work(" лунный камень ", " магнит ");
 
         Rocket rocket = new Rocket(engine, fans, thermostats, airCleaners);
-
+        WhatTimeIsAtNow time = new WhatTimeIsAtNow();
 
 
 
@@ -96,6 +107,14 @@ public class Main {
         neznaika.setLocation(pl_in,pl_building);
         System.out.println(neznaika.describe());
         System.out.println(neznaika.Fly());
+        System.out.println();
 
+        if (time.getTime() == Time.MORNING){
+            System.out.println(neznaika + " включил прибор невесомости.");
+            workOfAntiGravityDevice.process();
+        }
+        if (time.getTime() == Time.EVENING) {
+            System.out.println(neznaika + " тщательно проверил, не остался ли кто-нибудь в павильоне.");
+        }
     }
 }
