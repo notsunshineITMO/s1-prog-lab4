@@ -1,5 +1,6 @@
-package other;
+package Cabins;
 
+import other.ElectricMachineOfControl;
 import technical.IDescribable;
 import technical.PartsOfRocket;
 import technical.Places;

@@ -1,4 +1,4 @@
-package other;
+package Cabins;
 
 public class AstronauticCabin {
     private String telescope;

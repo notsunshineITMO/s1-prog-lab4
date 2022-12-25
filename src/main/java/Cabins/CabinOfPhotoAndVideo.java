@@ -1,4 +1,4 @@
-package other;
+package Cabins;
 
 public class CabinOfPhotoAndVideo {
     private String cameras;
