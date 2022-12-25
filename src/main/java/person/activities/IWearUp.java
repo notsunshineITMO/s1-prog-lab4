@@ -1,4 +1,4 @@
 package person.activities;
 
-public interface WearUp {
+public interface IWearUp {
 }
