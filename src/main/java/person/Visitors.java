@@ -1,10 +1,12 @@
 package person;
 
+import person.activities.ICould;
 import person.activities.IFlyable;
+import person.activities.IWearUp;
 import technical.*;
 import person.activities.IAsk;
 
-public class Visitors extends Person implements IDescribable, IAsk, IFlyable {
+public class Visitors extends Person implements IDescribable, IAsk, IFlyable, ICould, IWearUp {
     private int count;
     private String location;
     private final Where where = new Where();
@@ -39,18 +41,33 @@ public class Visitors extends Person implements IDescribable, IAsk, IFlyable {
     }
 
     @Override
-    public String describe(){
-        return getCount() + " " + getName() + "находились " + getLocation();
-    }
-
-
-    @Override
     public String Fly() {
         if (getLocation().equals("IN PAVILION_OF_ZERO_GRAVITY ")){
         return getName() + "летает";
         }
         return null;
     }
+
+    @Override
+    public String lay(String where) {
+        return this.name + could + "полежать " + where;
+    }
+
+    @Override
+    public String sit(String where) {
+        return this.name + could + "посидеть " + where;
+    }
+
+    @Override
+    public String examine(PartsOfRocket what) {
+        return this.name + could + "изучить " + what;
+    }
+
+    @Override
+    public String describe(){
+        return getCount() + " " + getName() + "находились " + getLocation();
+    }
+
 }
 
 
