@@ -8,6 +8,7 @@ public enum PartsOfRocket {
     FANS,
     THERMOSTATS,
     UPPER_PART,
-    LOWER_PART
+    LOWER_PART,
+    ELEVATOR
 
 }
