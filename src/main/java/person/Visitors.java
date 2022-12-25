@@ -1,12 +1,9 @@
 package person;
 
-import person.activities.ICould;
-import person.activities.IFlyable;
-import person.activities.IWearUp;
+import person.activities.*;
 import technical.*;
-import person.activities.IAsk;
 
-public class Visitors extends Person implements IDescribable, IAsk, IFlyable, ICould, IWearUp {
+public class Visitors extends Person implements IDescribable, IAsk, IFlyable, ICould, IWearUp, IInterested {
     private int count;
     private String location;
     private final Where where = new Where();
@@ -78,6 +75,8 @@ public class Visitors extends Person implements IDescribable, IAsk, IFlyable, IC
         return getCount() + " " + getName() + "находились " + getLocation();
     }
 
+    @Override
+    public void interested(Places what) {
+        System.out.println(this.name + " интересуются " +  what);
+    }
 }
-
-
