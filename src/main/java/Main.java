@@ -117,7 +117,7 @@ public class Main {
             System.out.println(neznaika + " тщательно проверил, не остался ли кто-нибудь в павильоне.");
         }
 
-        if (visitors.getLocation() == Places.NEAR.toString() + Places.SQUARE_OF_ZERO_GRAVITY_AREA.toString()){
+        if (visitors.getLocation() == Places.NEAR.toString() + Places.AREA_OF_ZERO_GRAVITY.toString()){
 
         }
     }

@@ -1,7 +1,7 @@
 package Plants;
 
 public enum Berries {
-    MELONS,
+    WATERMELONS,
     CHERRIES,
     PLUMS,
     STRAWBERRIES,
