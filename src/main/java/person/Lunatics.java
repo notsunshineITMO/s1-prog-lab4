@@ -1,5 +1,6 @@
 package person;
 
+import Plants.Vegetables;
 import technical.IDescribable;
 import technical.Where;
 
@@ -7,6 +8,7 @@ public class Lunatics extends Person implements IDescribable {
     private int count;
     private String location;
     private final Where where = new Where();
+    public static Vegetables vegetables = Vegetables.LUNAR_VEGETABLES;
 
     public Lunatics(String name, int count) {
         super(name);
@@ -28,6 +30,14 @@ public class Lunatics extends Person implements IDescribable {
 
     public String getLocation() {
         return location;
+    }
+
+    public static Vegetables getVegetables() {
+        return vegetables;
+    }
+
+    public static void setVegetables(Vegetables vegetables) {
+        Lunatics.vegetables = vegetables;
     }
 
     @Override
