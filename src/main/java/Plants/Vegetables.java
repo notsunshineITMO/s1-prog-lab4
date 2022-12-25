@@ -5,5 +5,6 @@ public enum Vegetables {
     TOMATOES,
     CARROTS,
     CABBAGE,
-    TURNIP
+    TURNIP,
+    LUNAR_VEGETABLES
 }
