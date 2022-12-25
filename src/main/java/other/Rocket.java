@@ -17,12 +17,10 @@ public class Rocket {
     }
 
     public void launchSystems() throws InterruptedException {
+        ElectricMachineOfControl.setPower(true);
         System.out.println("Запуск всех систем...");
         Thread.sleep(1000);
-        Engine.setOn(true);
-        Fans.setOn(true);
-        Thermostats.setOn(true);
-        AirCleaners.setOn(true);
+        ElectricMachineOfControl.superProgram(ElectricMachineOfControl.isPower());
         System.out.println("Все систеы запущены.");
         Thread.sleep(500);
         System.out.println();

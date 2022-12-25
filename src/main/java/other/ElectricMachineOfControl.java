@@ -7,7 +7,7 @@ public class ElectricMachineOfControl {
 
     }
 
-    public boolean isPower() {
+    public static boolean isPower() {
         return power;
     }
 
@@ -15,7 +15,7 @@ public class ElectricMachineOfControl {
         ElectricMachineOfControl.power = power;
     }
 
-    public void superProgram(boolean isPower){
+    public static void superProgram(boolean isPower){
         if (isPower){
             Engine.setOn(true);
             AirCleaners.setOn(true);
