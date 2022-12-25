@@ -1,10 +1,13 @@
 package person;
 
+import other.AntiGravityDevice;
 import person.activities.IFlyable;
+import person.activities.IInterested;
+import person.activities.ITake;
 import technical.*;
 import person.activities.IAsk;
 
-public class Neznaika extends Person implements IDescribable, IAsk, IFlyable {
+public class Neznaika extends Person implements IDescribable, IAsk, IFlyable, IInterested, ITake {
     private String location;
     private Where where = new Where();
 
@@ -42,6 +45,16 @@ public class Neznaika extends Person implements IDescribable, IAsk, IFlyable {
             return getName() + "летает";
         }
         return null;
+    }
+
+    @Override
+    public void interested(Places what) {
+        System.out.println(this.name + " очень-очень сильно интересуется " +  what);
+    }
+
+    @Override
+    public void take(String what) {
+        System.out.println(this.name + isTake + what);
     }
 
     @Override
