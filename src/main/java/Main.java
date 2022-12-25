@@ -21,6 +21,7 @@ public class Main {
 
         Building pavilionNevesomosti = new Building(Places.CITY.toString(), "Павильон невесомости", "Белое", "в форме перевернутой миски", "Большое", true );
         City kosmicheskiy = new City("Космический", "существует");
+        City tsvetochnyi = new City("Цветочный", "существует");
 
         Engine engine = new Engine("steel", 1.25);
         Fans fans = new Fans("steel", 23);
