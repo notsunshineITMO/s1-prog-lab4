@@ -8,8 +8,8 @@ import technical.*;
 public class Seledochka extends Person implements IDescribable, IAnswer, IWatchingFor, ISay {
     private String location;
     private Where where = new Where();
-    public Seledochka (String name){
-        super(name);
+    public Seledochka (String name, double weight){
+        super(name, weight);
     }
 
     public void setLocation(String whereExactly, String location) {

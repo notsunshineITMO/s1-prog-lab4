@@ -8,8 +8,8 @@ public class Neznaika extends Person implements IDescribable, IAsk, IFlyable {
     private String location;
     private Where where = new Where();
 
-    public Neznaika(String name) {
-        super(name);
+    public Neznaika(String name, double weight) {
+        super(name,weight);
     }
 
 

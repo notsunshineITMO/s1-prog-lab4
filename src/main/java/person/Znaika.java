@@ -8,8 +8,8 @@ import technical.IDescribable;
 public class Znaika extends Person implements IDescribable, IDecide, IGift {
     String aGift;
     String aPerson;
-    public Znaika(String name) {
-        super(name);
+    public Znaika(String name, double weight) {
+        super(name, weight);
     }
 
     @Override

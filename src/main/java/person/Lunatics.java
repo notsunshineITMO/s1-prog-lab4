@@ -10,8 +10,8 @@ public class Lunatics extends Person implements IDescribable {
     private final Where where = new Where();
     public static Vegetables vegetables = Vegetables.LUNAR_VEGETABLES;
 
-    public Lunatics(String name, int count) {
-        super(name);
+    public Lunatics(String name, double weight, int count) {
+        super(name, weight);
         this.count = count;
     }
 

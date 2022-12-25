@@ -11,8 +11,8 @@ public class Visitors extends Person implements IDescribable, IAsk, IFlyable, IC
     private String location;
     private final Where where = new Where();
 
-    public Visitors (String name, int count) {
-        super(name);
+    public Visitors (String name, double weight, int count) {
+        super(name, weight);
         this.count = count;
     }
 

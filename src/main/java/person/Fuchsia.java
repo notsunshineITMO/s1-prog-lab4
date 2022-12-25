@@ -10,8 +10,8 @@ public class Fuchsia extends Person implements IDescribable, IAnswer, IWatchingF
     private String location;
     private Where where = new Where();
 
-    public Fuchsia (String name){
-        super(name);
+    public Fuchsia (String name, double weight){
+        super(name, weight);
     }
 
     public void setLocation(String whereExactly, String location) {

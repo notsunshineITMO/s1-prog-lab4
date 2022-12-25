@@ -4,9 +4,11 @@ import java.util.Objects;
 
 public abstract class Person {
     public String name;
+    public double weight;
 
-    public Person(String name) {
+    public Person(String name, double weight) {
         this.name = name;
+        this.weight = weight;
     }
 
     public String getName() {

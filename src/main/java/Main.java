@@ -15,11 +15,11 @@ public class Main {
         String pl_in = Places.IN.toString();
         String pl_near = Places.NEAR.toString();
 
-        Znaika znaika = new Znaika("Знайка");
-        Neznaika neznaika = new Neznaika("Незнайка");
-        Fuchsia fuchsia = new Fuchsia("Фуксия");
-        Seledochka seledochka = new Seledochka("Селёдочка");
-        Visitors visitors = new Visitors("посетители",48);
+        Znaika znaika = new Znaika("Знайка", 50);
+        Neznaika neznaika = new Neznaika("Незнайка", 55);
+        Fuchsia fuchsia = new Fuchsia("Фуксия", 43);
+        Seledochka seledochka = new Seledochka("Селёдочка", 46.52);
+        Visitors visitors = new Visitors("посетители",2395.2, 48);
 
         Building pavilionNevesomosti = new Building(Places.CITY.toString(), "Павильон невесомости", "Белое", "в форме перевернутой миски", "Большое", true );
         City kosmicheskiy = new City("Космический", "существует");
@@ -42,7 +42,7 @@ public class Main {
         Rocket rocket = new Rocket(engine, fans, thermostats, airCleaners);
         WhatTimeIsAtNow time = new WhatTimeIsAtNow();
 
-
+        ////////////////////////////////////////
 
         rocket.launchSystems();
         rocket.globalCheckUp();
@@ -115,6 +115,10 @@ public class Main {
         }
         if (time.getTime() == Time.EVENING) {
             System.out.println(neznaika + " тщательно проверил, не остался ли кто-нибудь в павильоне.");
+        }
+
+        if (visitors.getLocation() == Places.NEAR.toString() + Places.SQUARE_OF_ZERO_GRAVITY_AREA.toString()){
+
         }
     }
 }
