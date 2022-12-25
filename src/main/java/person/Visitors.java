@@ -7,10 +7,14 @@ import person.activities.IAsk;
 public class Visitors extends Person implements IDescribable, IAsk, IFlyable {
     private int count;
     private String location;
-    private Where where = new Where();
+    private final Where where = new Where();
 
     public Visitors (String name, int count) {
         super(name);
+        this.count = count;
+    }
+
+    public void setCount(int count) {
         this.count = count;
     }
 
