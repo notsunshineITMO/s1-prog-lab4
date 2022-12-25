@@ -43,23 +43,33 @@ public class Visitors extends Person implements IDescribable, IAsk, IFlyable, IC
     @Override
     public String Fly() {
         if (getLocation().equals("IN PAVILION_OF_ZERO_GRAVITY ")){
-        return getName() + "летает";
+        return getName() + " летает";
         }
         return null;
     }
 
     @Override
+    public String must(String whatToDo) {
+        return this.name + " обязаны " + whatToDo;
+    }
+
+    @Override
+    public String toDo(String whatToDo) {
+        return this.name + " " + whatToDo;
+    }
+
+    @Override
     public String lay(String where) {
-        return this.name + could + "полежать " + where;
+        return this.name + could + " полежать " + where;
     }
 
     @Override
     public String sit(String where) {
-        return this.name + could + "посидеть " + where;
+        return this.name + could + " посидеть " + where;
     }
 
     @Override
-    public String examine(PartsOfRocket what) {
+    public String examine(String what) {
         return this.name + could + "изучить " + what;
     }
 
