@@ -13,6 +13,7 @@ public class Main {
         String pl_in = Places.IN.toString();
         String pl_near = Places.NEAR.toString();
 
+        Znaika znaika = new Znaika("Знайка");
         Neznaika neznaika = new Neznaika("Незнайка");
         Fuchsia fuchsia = new Fuchsia("Фуксия");
         Seledochka seledochka = new Seledochka("Селёдочка");
