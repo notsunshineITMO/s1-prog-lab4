@@ -2,19 +2,13 @@ import Cabins.CabinInPavilion;
 import other.*;
 import person.*;
 import person.activities.IInterested;
-import technical.PartsOfRocket;
-import technical.Places;
-import technical.Time;
-import technical.WhatTimeIsAtNow;
+import technical.*;
 
 import java.util.Scanner;
 
 
 public class Main{
     public static void main(String[] args) throws InterruptedException {
-        try (Scanner scanner = new Scanner(System.in);){
-            scanner.nextLine();
-        }
         // PLACES
         String pl_rocket = Places.ROCKET.toString();
         String pl_pavilion = Places.PAVILION_OF_ZERO_GRAVITY.toString();
@@ -178,7 +172,14 @@ public class Main{
         neznaika.setLocation(pl_near, pl_river);
         System.out.println(neznaika.describe());
         /////////////////////////////////////////
+
+        try {
+            throw new freeTextError("COPY-PASTE!!!!!!!!!!");
+        } catch (freeTextError e) {
+            System.err.println(e);;
+        }
         System.out.println("*ВНЕЗАПНО*");
+
         System.out.println("Ему почему-то захотелось посмотреть, что будут делать рыбы в реке, \n" +
                 "когда окажутся в состоянии невесомости. Неизвестно, почему ему в голову забралась \n" +
                 "такая мысль. Может быть, он начал думать о рыбах, потому что сам, словно рыба, целыми \n" +
