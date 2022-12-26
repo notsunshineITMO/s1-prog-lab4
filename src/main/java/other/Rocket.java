@@ -1,6 +1,7 @@
 package other;
 
 import technical.PartsOfRocket;
+import technical.globalCheckUpError;
 
 public class Rocket {
     private final Engine engine;
@@ -37,11 +38,10 @@ public class Rocket {
         Thread.sleep(250);
         System.out.println(airCleaners.allert());
         Thread.sleep(250);
-        if (engine.condition() && fans.condition() && thermostats.condition() && airCleaners.condition()) {
-            System.out.println("Все системы в норме. Проверка прошла успешна!");
-        } else {
-            System.out.println("Сбой в одной из систем. Проверка не пройдена!!!");
+        if (!(engine.condition() && fans.condition() && thermostats.condition() && airCleaners.condition())) {
+            throw new globalCheckUpError("Сбой в одной из систем. Проверка не пройдена!!!");
         }
+        System.out.println("Все системы в норме. Проверка прошла успешна!");
     }
 
     public static void Notice(String name, String inout) {
