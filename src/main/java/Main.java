@@ -1,14 +1,34 @@
 import Cabins.CabinInPavilion;
+import dagger.Component;
 import other.*;
 import person.*;
 import person.activities.IInterested;
 import technical.*;
 
+import javax.inject.Scope;
+import javax.swing.*;
 import java.util.Scanner;
 
+@Component
+@SwingContainer
+class MyClass{
+
+
+
+}
 
 public class Main{
+
+    void get(Class clazz){
+        System.out.println(clazz.getAnnotations());
+    }
+
     public static void main(String[] args) throws InterruptedException {
+
+        var s = String.class;
+
+
+
         // PLACES
         String pl_rocket = Places.ROCKET.toString();
         String pl_pavilion = Places.PAVILION_OF_ZERO_GRAVITY.toString();
@@ -172,7 +192,6 @@ public class Main{
         neznaika.setLocation(pl_near, pl_river);
         System.out.println(neznaika.describe());
         /////////////////////////////////////////
-
         try {
             throw new freeTextError("COPY-PASTE!!!!!!!!!!");
         } catch (freeTextError e) {
