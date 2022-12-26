@@ -7,9 +7,14 @@ import technical.Places;
 import technical.Time;
 import technical.WhatTimeIsAtNow;
 
+import java.util.Scanner;
+
 
 public class Main{
     public static void main(String[] args) throws InterruptedException {
+        try (Scanner scanner = new Scanner(System.in);){
+            scanner.nextLine();
+        }
         // PLACES
         String pl_rocket = Places.ROCKET.toString();
         String pl_pavilion = Places.PAVILION_OF_ZERO_GRAVITY.toString();
